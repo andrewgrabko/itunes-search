@@ -1,0 +1,177 @@
+@import "normalize";
+@import "layout";
+
+body{
+
+}
+
+
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+}
+
+
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}	
+
+.ba-logo{
+	max-width: 100px;
+	
+}
+.ba-header{
+	padding: 40px 20px 60px;
+	margin-bottom: 30px;
+	color:#fff;
+	text-align: center;
+	background: url(../img/psp-hero-itunes.image.large_2x.jpg) 50%;
+	background-size:cover;
+}
+.ba-page-title{
+	font-weight: 400;
+	margin: 0;
+}
+
+.ba-page-subtitle{
+	
+	font-weight: 200;
+}
+.ba-search-form{
+	display: flex;
+	max-width: 500px;
+	margin: 0 auto 30px;
+	
+	.input-field{
+		flex-grow: 1;
+		margin:0 20px 0 0;
+	}
+	button{
+		flex-shrink:0;
+	}
+}
+
+.page-footer{
+	margin-top: 50px;
+	margin: 0;
+}
+.ba-tunes-list{
+	display: flex;
+	flex-wrap:wrap;
+	margin: 0 -10px;
+	padding-top: 20px;
+}
+.ba-tune-card{
+	width: calc(100% - 20px);
+	margin-left:10px;
+	margin-right: 10px;
+	display: flex;
+	flex-direction:column;
+	.card-content{
+		flex-grow:1;
+	}
+
+	 @media (min-width:768px) {
+        width: calc(50% - 20px);        
+    }
+    @media (min-width:1024px) {
+        width: calc(33% - 20px);        
+    }
+    @media (min-width:1200px) {
+        width: calc(25% - 20px);        
+    }
+
+    .card-image{
+    	.card-title{
+    		width: 100%;
+    		max-height:100%;
+    		overflow: hidden;
+    		background-image:linear-gradient(to top, #000, rgba(0,0,0,0));
+    	}
+    }
+}
+.material-icons{
+	vertical-align: middle;
+}
+
+.ba-play-btn{
+	.material-icons{
+		pointer-events:none;
+	}
+	.ba-icon-pause{
+		display: none;
+	}
+	&.pulse{
+		.ba-icon-pause{
+			display: block;
+		}
+		.ba-icon-play{
+			display: none;
+		}
+	}
+}
+
+.ba-tunes-wrap{
+	position: relative;
+	min-height:100px;
+	.preloader-wrapper{
+		position: absolute;
+		top: 20px;
+		left: 50%;
+		margin-left: -32px;
+	}
+}
+
+
+
+
+
+

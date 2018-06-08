@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ba-itunes</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="" />
+	<link rel="icon" href="favicon.png"/>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/materialize.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	
+</head>
+<body>
+
+	<div class="ba-header">
+		<img class="ba-logo" src="favicon.png" alt="itunes">
+		<h1 class="ba-page-title">iTunes search</h1>
+		<h4 class="ba-page-subtitle">
+			Your music,movies and TV shows take center stage
+		</h4>
+	</div>
+	<main class="ba-main">
+		<div class="ba-container">
+			<form class="ba-search-form card-panel" action="#" method="post">
+				<div class="input-field">
+                <input value="Pink Floyd" required id="query" name="query" type="text" class="validate">
+                <label for="query" class="">Enter artist</label>
+                </div>
+               	<button type="submit" class="btn-floating btn-large waves-effect waves-light red">
+               		<i class="material-icons">
+               			search
+               	 	</i>
+               	</button>
+
+              
+			</form>
+			<div class="divider">
+				
+			</div>
+			<div class="ba-tunes-wrap">
+				<div class="preloader-wrapper big ba-loader">
+    				<div class="spinner-layer spinner-blue-only">
+      					<div class="circle-clipper left">
+        				<div class="circle"></div>
+     					 </div><div class="gap-patch">
+       					 <div class="circle"></div>
+      					</div><div class="circle-clipper right">
+        				<div class="circle"></div>
+      					</div>
+    				</div>
+  				</div>
+				<div class="ba-tunes-list">
+					<script id="tune-tmpl" type="text/template">
+					<div class="card hoverable ba-tune-card">
+              <div class="card-image">
+                <img src="{{artworkUrl100}}" alt="{{collectionName}}">
+                <span class="card-title">{{artistName}}</span>
+                <button class="btn-large btn-floating blue halfway-fab waves-effect waves-light red ba-play-btn" data-audio="audio-{{trackId}}">
+                	<i class="material-icons ba-icon-play">play_arrow</i>
+                	<i class="material-icons ba-icon-pause">pause</i>
+                </button>
+                	<audio id="audio-{{trackId}}" src="{{previewUrl}}"></audio>
+              </div>
+              <div class="card-content">
+              	<span class="card-title">{{trackName}}</span>
+                <p>
+                	Album - {{collectionName}}
+                	<span class="badge new" data-badge-caption="">
+                        <i class="material-icons tiny">access_time</i> {{trackTime}}
+                    </span>
+                </p>
+                <p class="grey-text text-lighten-1">Genre - {{primaryGenreName}}</p>
+              </div>
+              <div class="card-action">
+          			<a href="#{{collectionViewUrl}}" target="_blank">
+          				<i class="material-icons tiny">shopping_cart</i>
+						Buy collection - ${{collectionPrice}}
+          			</a>
+        		</div>
+            </div>
+            </script>
+				</div>
+			</div>
+		</div>
+		
+	</main>
+	<footer class="page-footer pink">
+		
+			<div class="footer-copyright">
+            <div class="container">
+            &copy; 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">created by crazy Beetroots</a>
+            </div>
+          </div>
+		
+	</footer>
+	
+	<script src="js/materialize.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
